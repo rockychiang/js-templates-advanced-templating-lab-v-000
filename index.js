@@ -42,7 +42,7 @@ function updateRecipe() {
   document.getElementById("main").innerHTML = template(recipe)
 }
 
-function getRecipeVals() {
+function getValues() {
   const name = document.getElementById("name").value
   const description = document.getElementById("description").value
   const ingredientList = document.getElementsByName("ingredients")
