@@ -15,7 +15,7 @@ function init() {
 function displayEditForm() {
   const name = document.getElementById("nameHeader").innerText
   const description = document.getElementById("recipeDescription").innerText
-  const ingredientsNodes = document.getElementsByName("ingredientsList")
+  const ingredientsNodes = document.getElementsByName("ingredients")
   let ingredients = []
   
   for(let i = 0; i < ingredientsNodes.length; i++) {
