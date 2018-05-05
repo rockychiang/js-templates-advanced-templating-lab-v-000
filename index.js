@@ -45,13 +45,6 @@ function createRecipe() {
 }
 
 function updateRecipe() {
-  var recipe = getValues()
-  const template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  
-  document.getElementById("main").innerHTML = template({name, ingredients, description})
-}
-
-function getValues() {
   const name = document.getElementById("name").value
   const description = document.getElementById("description").value
   const ingredientList = document.getElementsByName("ingredients")
@@ -62,6 +55,14 @@ function getValues() {
       ingredients.push(ingredientList[i].value)
     }
   }
+  
+  const template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  
+  document.getElementById("main").innerHTML = template({name, ingredients, description})
+}
+
+function getValues() {
+
 
   return()
 }
