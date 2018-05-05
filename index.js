@@ -48,7 +48,7 @@ function updateRecipe() {
   var recipe = getValues()
   const template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   
-  document.getElementById("main").innerHTML = template(recipe)
+  document.getElementById("main").innerHTML = template({name, ingredients, description})
 }
 
 function getValues() {
@@ -63,7 +63,7 @@ function getValues() {
     }
   }
 
-  return({name, ingredients, description})
+  return()
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
