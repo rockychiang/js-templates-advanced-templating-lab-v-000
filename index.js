@@ -7,7 +7,7 @@ function init() {
     return new Handlebars.SafeString(ingredient)
   })
   
-  var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
+  var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   document.getElementsByTagName("main")[0].innerHTML = template({'submitAction': 'createRecipe()'})
 }
 
