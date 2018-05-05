@@ -27,20 +27,6 @@ function init() {
     document.getElementById("main").innerHTML = template(recipe)
   }
   
-  function createRecipe() {
-    var recipe = getRecipeVals()
-    var recipeTemplate = document.getElementById("recipe-template").innerHTML
-    var template = Handlebars.compile(recipeTemplate)
-    document.getElementById("main").innerHTML = template(recipe)
-  }
-  
-  function updateRecipe() {
-    var recipe = getRecipeVals()
-    var recipeTemplate = document.getElementById("recipe-template").innerHTML
-    var template = Handlebars.compile(recipeTemplate)
-    document.getElementById("main").innerHTML = template(recipe)
-  }
-  
   function getRecipeVals() {
     var ingredientsNodes = document.getElementsByName("ingredients")
     var ingredients = []
@@ -54,6 +40,20 @@ function init() {
     var recipe = {name, ingredients, description}
     return(recipe)
   }
+}
+
+function createRecipe() {
+  var recipe = getRecipeVals()
+  var recipeTemplate = document.getElementById("recipe-template").innerHTML
+  var template = Handlebars.compile(recipeTemplate)
+  document.getElementById("main").innerHTML = template(recipe)
+}
+
+function updateRecipe() {
+  var recipe = getRecipeVals()
+  var recipeTemplate = document.getElementById("recipe-template").innerHTML
+  var template = Handlebars.compile(recipeTemplate)
+  document.getElementById("main").innerHTML = template(recipe)
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
