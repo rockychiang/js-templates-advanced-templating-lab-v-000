@@ -8,6 +8,10 @@ function init() {
   function createRecipe(){
     
   }
+  
+  function updateRecipe(){
+    
+  }
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
