@@ -15,11 +15,11 @@ function init() {
 function displayEditForm() {
   const name = document.getElementById("nameHeader").innerText
   const description = document.getElementById("recipeDescription").innerText
-  const ingredientsNodes = document.getElementsByName("ingredients")
+  const ingredientList = document.getElementsByName("ingredients")
   let ingredients = []
   
-  for(let i = 0; i < ingredientsNodes.length; i++) {
-    ingredients.push(ingredientsNodes[i].innerText)
+  for(let i = 0; i < ingredientList.length; i++) {
+    ingredients.push(ingredientList[i].innerText)
   }
 
   var recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
