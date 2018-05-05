@@ -22,10 +22,10 @@ function displayEditForm() {
     ingredients.push(ingredientList[i].innerText)
   }
 
-  var recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
+  var recipe = 
   var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
   
-  document.getElementById("main").innerHTML = template(recipe)
+  document.getElementById("main").innerHTML = template({name, description, ingredients, submitAction: 'createRecipe()'})
 }
 
 function createRecipe() {
