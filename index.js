@@ -43,7 +43,7 @@ function updateRecipe() {
 }
 
 function getRecipeVals() {
-  var ingredientList = document.getElementsByName("ingredients")
+  const ingredientList = document.getElementsByName("ingredients")
   let ingredients = []
   for(let i = 0; i < ingredientList.length; i++) {
     if( ingredientList[i].value !== "" ) {
