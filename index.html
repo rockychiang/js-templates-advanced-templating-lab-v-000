@@ -24,8 +24,8 @@
     </script>
     
     <script id="recipe-details-partial" type="text/x-handlebars-template">
+      <p>{{description}}</p>
       <ul>
-        <p>{{description}}</p>
         {{#each ingredients}}
           <li>{{ displayIngredient this }}</li>
         {{/each}}
