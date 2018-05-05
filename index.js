@@ -5,6 +5,9 @@ function init() {
     return new Handlebars.SafeString(this.name)
   })
   
+  function createRecipe(){
+    
+  }
 }
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
