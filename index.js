@@ -54,7 +54,6 @@ function getRecipeVals() {
     }
   }
 
-  const recipe = 
   return({name, ingredients, description})
 }
 
