@@ -51,7 +51,7 @@ function getRecipeVals() {
     }
   }
   const name = document.getElementById("name").value
-  var description = document.getElementById("description").value
+  const description = document.getElementById("description").value
   var recipe = {name, ingredients, description}
   return(recipe)
 }
