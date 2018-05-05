@@ -11,6 +11,8 @@
     </main>
     <script id="recipe-form-template" type="text/x-handlebars-template">
       <form id="recipe-form" onsubmit="createRecipe()">
+        
+        {{> recipeFormPartial }}
         <label id="name">Name: </label>
         <input type="text" id="name"><br>
         
