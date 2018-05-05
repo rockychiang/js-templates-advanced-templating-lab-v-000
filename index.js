@@ -38,8 +38,7 @@ function createRecipe() {
 
 function updateRecipe() {
   var recipe = getRecipeVals()
-  var recipeTemplate = document.getElementById("recipe-template").innerHTML
-  var template = Handlebars.compile(recipeTemplate)
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
   document.getElementById("main").innerHTML = template(recipe)
 }
 
