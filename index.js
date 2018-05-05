@@ -18,8 +18,11 @@ function init() {
     document.getElementById("main").innerHTML = template(recipe)
   }
   
-  function updateRecipe(){
-    
+  function updateRecipe() {
+    var recipe = getRecipeVals()
+    var recipeTemplate = document.getElementById("recipe-template").innerHTML
+    var template = Handlebars.compile(recipeTemplate)
+    document.getElementById("main").innerHTML = template(recipe)
   }
 }
 
@@ -35,12 +38,7 @@ function initForm() {
 
 
 
-function updateRecipe() {
-  var recipe = getRecipeVals()
-  var recipeTemplate = document.getElementById("recipe-template").innerHTML
-  var template = Handlebars.compile(recipeTemplate)
-  document.getElementById("main").innerHTML = template(recipe)
-}
+
 
 function displayEditForm() {
   var name = document.getElementById("nameHeader").innerText
