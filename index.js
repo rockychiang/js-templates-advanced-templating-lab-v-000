@@ -24,8 +24,7 @@ function displayEditForm() {
 
   var recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
 
-  var recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML
-  var template = Handlebars.compile(recipeFormTemplate)
+  var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
   document.getElementById("main").innerHTML = template(recipe)
 }
 
