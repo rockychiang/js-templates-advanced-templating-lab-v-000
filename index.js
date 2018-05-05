@@ -53,7 +53,8 @@ function getRecipeVals() {
       ingredients.push(ingredientList[i].value)
     }
   }
-  var recipe = {name, ingredients, description}
+
+  const recipe = {name, ingredients, description}
   return(recipe)
 }
 
