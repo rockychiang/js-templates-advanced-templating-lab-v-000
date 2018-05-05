@@ -4,7 +4,7 @@ function init() {
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
   
   Handlebars.registerHelper('displayIngredient', function(ingredient) {
-    return new Handlebars.SafeString(this.ingredient)
+    return new Handlebars.SafeString(ingredient)
   })
   
   function displayEditForm(){
