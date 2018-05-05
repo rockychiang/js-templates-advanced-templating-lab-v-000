@@ -5,6 +5,10 @@ function init() {
     return new Handlebars.SafeString(this.name)
   })
   
+  Handlebars.registerHelper('displayIngredient', function() {
+    return new Handlebars.SafeString(this.name)
+  })
+  
   function displayEditForm(){
     
   }
