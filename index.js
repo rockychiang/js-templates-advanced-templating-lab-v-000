@@ -28,10 +28,20 @@ function displayEditForm() {
 }
 
 function createRecipe() {
-  var recipe = getValues()
+  const name = document.getElementById("name").value
+  const description = document.getElementById("description").value
+  const ingredientList = document.getElementsByName("ingredients")
+  let ingredients = []
+
+  for(let i = 0; i < ingredientList.length; i++) {
+    if( ingredientList[i].value !== "" ) {
+      ingredients.push(ingredientList[i].value)
+    }
+  }
+
   const template = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   
-  document.getElementById("main").innerHTML = template(recipe);
+  document.getElementById("main").innerHTML = template({name, ingredients, description});
 }
 
 function updateRecipe() {
