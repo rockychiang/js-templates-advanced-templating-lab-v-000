@@ -11,22 +11,24 @@ function init() {
   var template = Handlebars.compile(formTemplate)
   document.getElementsByTagName("main")[0].innerHTML = template({'submitAction': 'createRecipe()'})
   
-  function displayEditForm() {
-    var name = document.getElementById("nameHeader").innerText
-    var description = document.getElementById("recipeDescription").innerText
-    var ingredientsNodes = document.getElementsByName("ingredientsList")
-    var ingredients = []
-    for(var i=0;i<ingredientsNodes.length;i++) {
-      ingredients.push(ingredientsNodes[i].innerText)
-    }
+
   
-    var recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
-  
-    var recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML
-    var template = Handlebars.compile(recipeFormTemplate)
-    document.getElementById("main").innerHTML = template(recipe)
+}
+
+function displayEditForm() {
+  var name = document.getElementById("nameHeader").innerText
+  var description = document.getElementById("recipeDescription").innerText
+  var ingredientsNodes = document.getElementsByName("ingredientsList")
+  var ingredients = []
+  for(var i=0;i<ingredientsNodes.length;i++) {
+    ingredients.push(ingredientsNodes[i].innerText)
   }
-  
+
+  var recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
+
+  var recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML
+  var template = Handlebars.compile(recipeFormTemplate)
+  document.getElementById("main").innerHTML = template(recipe)
 }
 
 function createRecipe() {
