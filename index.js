@@ -13,7 +13,7 @@ function init() {
 }
 
 function displayEditForm() {
-  const name = document.getElementById("nameHeader").innerText
+  const name = document.getElementById("name").innerText
   const description = document.getElementById("recipeDescription").innerText
   const ingredientList = document.getElementsByName("ingredients")
   let ingredients = []
