@@ -5,6 +5,10 @@ function init() {
     return new Handlebars.SafeString(this.name)
   })
   
+  function displayEditForm(){
+    
+  }
+  
   function createRecipe(){
     
   }
