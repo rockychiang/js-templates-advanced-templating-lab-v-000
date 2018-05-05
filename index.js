@@ -54,8 +54,8 @@ function getRecipeVals() {
     }
   }
 
-  const recipe = {name, ingredients, description}
-  return(recipe)
+  const recipe = 
+  return({name, ingredients, description})
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
