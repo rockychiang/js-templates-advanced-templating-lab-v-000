@@ -43,6 +43,8 @@ function updateRecipe() {
 }
 
 function getRecipeVals() {
+  const name = document.getElementById("name").value
+  const description = document.getElementById("description").value
   const ingredientList = document.getElementsByName("ingredients")
   let ingredients = []
   for(let i = 0; i < ingredientList.length; i++) {
@@ -50,8 +52,6 @@ function getRecipeVals() {
       ingredients.push(ingredientList[i].value)
     }
   }
-  const name = document.getElementById("name").value
-  const description = document.getElementById("description").value
   var recipe = {name, ingredients, description}
   return(recipe)
 }
