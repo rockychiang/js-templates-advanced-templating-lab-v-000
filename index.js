@@ -61,12 +61,6 @@ function updateRecipe() {
   document.getElementById("main").innerHTML = template({name, ingredients, description})
 }
 
-function getValues() {
-
-
-  return()
-}
-
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
