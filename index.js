@@ -23,7 +23,3 @@ function init() {
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
-
-  Handlebars.registerHelper('displayIngredient', function(ingredient) {
-    return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
-  })
