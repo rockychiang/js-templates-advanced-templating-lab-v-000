@@ -18,7 +18,6 @@
     <script id="recipe-template" type="text/x-handlebars-template">
       <div id="recipe">
         <h2>{{name}}</h2>
-        <p>{{description}}</p>
         {{> recipeDetailsPartial }}
         <a href="#" onclick="displayEditForm();">Edit Recipe</a>
       </div>
@@ -26,6 +25,7 @@
     
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <ul>
+        <p>{{description}}</p>
         {{#each ingredients}}
           <li>{{ displayIngredient this }}</li>
         {{/each}}
