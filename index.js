@@ -47,6 +47,7 @@ function getRecipeVals() {
   const description = document.getElementById("description").value
   const ingredientList = document.getElementsByName("ingredients")
   let ingredients = []
+
   for(let i = 0; i < ingredientList.length; i++) {
     if( ingredientList[i].value !== "" ) {
       ingredients.push(ingredientList[i].value)
